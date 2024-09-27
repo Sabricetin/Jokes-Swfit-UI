@@ -11,6 +11,9 @@
 		1E25AF292CA67ECA00C7290E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E25AF282CA67ECA00C7290E /* ContentView.swift */; };
 		1E25AF2B2CA67ECC00C7290E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E25AF2A2CA67ECC00C7290E /* Assets.xcassets */; };
 		1E25AF2E2CA67ECC00C7290E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E25AF2D2CA67ECC00C7290E /* Preview Assets.xcassets */; };
+		1E25AF352CA67EF200C7290E /* JokesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E25AF342CA67EF200C7290E /* JokesData.swift */; };
+		1E25AF3C2CA6CC1D00C7290E /* JokesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E25AF3B2CA6CC1D00C7290E /* JokesViewModel.swift */; };
+		1E3557132CA70B9C00E5E7AA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1E3557122CA70B9C00E5E7AA /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		1E25AF282CA67ECA00C7290E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1E25AF2A2CA67ECC00C7290E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E25AF2D2CA67ECC00C7290E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1E25AF342CA67EF200C7290E /* JokesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesData.swift; sourceTree = "<group>"; };
+		1E25AF3B2CA6CC1D00C7290E /* JokesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewModel.swift; sourceTree = "<group>"; };
+		1E3557142CA7329C00E5E7AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E3557132CA70B9C00E5E7AA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +58,11 @@
 		1E25AF252CA67ECA00C7290E /* JokesAppSwfitUI */ = {
 			isa = PBXGroup;
 			children = (
+				1E3557142CA7329C00E5E7AA /* Info.plist */,
 				1E25AF262CA67ECA00C7290E /* JokesAppSwfitUIApp.swift */,
-				1E25AF282CA67ECA00C7290E /* ContentView.swift */,
+				1E3557172CA73EA600E5E7AA /* Views */,
+				1E3557152CA73E7C00E5E7AA /* Data */,
+				1E3557162CA73E9000E5E7AA /* ViewModel */,
 				1E25AF2A2CA67ECC00C7290E /* Assets.xcassets */,
 				1E25AF2C2CA67ECC00C7290E /* Preview Content */,
 			);
@@ -65,6 +75,30 @@
 				1E25AF2D2CA67ECC00C7290E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1E3557152CA73E7C00E5E7AA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1E25AF342CA67EF200C7290E /* JokesData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1E3557162CA73E9000E5E7AA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1E25AF3B2CA6CC1D00C7290E /* JokesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1E3557172CA73EA600E5E7AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E25AF282CA67ECA00C7290E /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +117,9 @@
 			dependencies = (
 			);
 			name = JokesAppSwfitUI;
+			packageProductDependencies = (
+				1E3557122CA70B9C00E5E7AA /* Alamofire */,
+			);
 			productName = JokesAppSwfitUI;
 			productReference = 1E25AF232CA67ECA00C7290E /* JokesAppSwfitUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +148,9 @@
 				Base,
 			);
 			mainGroup = 1E25AF1A2CA67ECA00C7290E;
+			packageReferences = (
+				1E25AF362CA6CA1A00C7290E /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 1E25AF242CA67ECA00C7290E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +179,8 @@
 			files = (
 				1E25AF292CA67ECA00C7290E /* ContentView.swift in Sources */,
 				1E25AF272CA67ECA00C7290E /* JokesAppSwfitUIApp.swift in Sources */,
+				1E25AF352CA67EF200C7290E /* JokesData.swift in Sources */,
+				1E25AF3C2CA6CC1D00C7290E /* JokesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +317,7 @@
 				DEVELOPMENT_TEAM = 2A7PW787VZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JokesAppSwfitUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +347,7 @@
 				DEVELOPMENT_TEAM = 2A7PW787VZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JokesAppSwfitUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +388,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1E25AF362CA6CA1A00C7290E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1E3557122CA70B9C00E5E7AA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E25AF362CA6CA1A00C7290E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1E25AF1B2CA67ECA00C7290E /* Project object */;
 }
