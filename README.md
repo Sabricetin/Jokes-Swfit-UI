@@ -47,6 +47,8 @@ Bu projeyi kurmak için aşağıdaki adımları izleyin:
 5. Projeyi çalıştırın.
 
 
-##Ekran Görüntüsü
-![Uploading Simulator Screen Recording - iPhone 15 Pro - 2024-10-11 at 00.06.36.gif…]()
+## Ekran Görüntüsü
+
+![Simulator Screen Recording - iPhone 15 Pro - 2024-10-11 at 00 06 36](https://github.com/user-attachments/assets/3b8809e2-ad97-4043-8237-a22824364d11)
+
 ---
