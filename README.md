@@ -26,6 +26,19 @@ Uygulama, aşağıdaki API uç noktalarını kullanır:
 - Şaka kategorileri
 - Şakaların detaylı bilgileri
 
+ ### Hata Yönetimi
+
+Uygulama, veri çekme sırasında oluşabilecek hatalar için aşağıdaki fonksiyonu kullanır:
+
+```swift
+case .failure(let error):
+    DispatchQueue.main.async {
+        self.errorMessage = "Veri alınamadı: \(error.localizedDescription)"
+    }
+```
+
+Bu fonksiyon, ağ isteği başarısız olduğunda çalışır ve hatayı `error.localizedDescription` ile alıp, kullanıcıya anlamlı bir hata mesajı olarak gösterir. Böylece, kullanıcıya ağ hatası yaşandığı net bir şekilde bildirilir.
+
 ### Kurulum
 Bu projeyi kurmak için aşağıdaki adımları izleyin:
 
