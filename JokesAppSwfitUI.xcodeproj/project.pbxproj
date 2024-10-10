@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E185FE22CB8658D0017B09E /* JokesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185FE12CB8658D0017B09E /* JokesDetailVC.swift */; };
+		1E185FE52CB86D6F0017B09E /* Translete-Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E185FE42CB86D6F0017B09E /* Translete-Api.swift */; };
 		1E25AF272CA67ECA00C7290E /* JokesAppSwfitUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E25AF262CA67ECA00C7290E /* JokesAppSwfitUIApp.swift */; };
 		1E25AF292CA67ECA00C7290E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E25AF282CA67ECA00C7290E /* ContentView.swift */; };
 		1E25AF2B2CA67ECC00C7290E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E25AF2A2CA67ECC00C7290E /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E185FE12CB8658D0017B09E /* JokesDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesDetailVC.swift; sourceTree = "<group>"; };
+		1E185FE42CB86D6F0017B09E /* Translete-Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Translete-Api.swift"; sourceTree = "<group>"; };
 		1E25AF232CA67ECA00C7290E /* JokesAppSwfitUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JokesAppSwfitUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E25AF262CA67ECA00C7290E /* JokesAppSwfitUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesAppSwfitUIApp.swift; sourceTree = "<group>"; };
 		1E25AF282CA67ECA00C7290E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E185FE32CB86D260017B09E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1E185FE42CB86D6F0017B09E /* Translete-Api.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		1E25AF1A2CA67ECA00C7290E = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +70,7 @@
 		1E25AF252CA67ECA00C7290E /* JokesAppSwfitUI */ = {
 			isa = PBXGroup;
 			children = (
+				1E185FE32CB86D260017B09E /* Service */,
 				1E3557142CA7329C00E5E7AA /* Info.plist */,
 				1E25AF262CA67ECA00C7290E /* JokesAppSwfitUIApp.swift */,
 				1E3557172CA73EA600E5E7AA /* Views */,
@@ -97,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				1E25AF282CA67ECA00C7290E /* ContentView.swift */,
+				1E185FE12CB8658D0017B09E /* JokesDetailVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +193,8 @@
 			files = (
 				1E25AF292CA67ECA00C7290E /* ContentView.swift in Sources */,
 				1E25AF272CA67ECA00C7290E /* JokesAppSwfitUIApp.swift in Sources */,
+				1E185FE22CB8658D0017B09E /* JokesDetailVC.swift in Sources */,
+				1E185FE52CB86D6F0017B09E /* Translete-Api.swift in Sources */,
 				1E25AF352CA67EF200C7290E /* JokesData.swift in Sources */,
 				1E25AF3C2CA6CC1D00C7290E /* JokesViewModel.swift in Sources */,
 			);

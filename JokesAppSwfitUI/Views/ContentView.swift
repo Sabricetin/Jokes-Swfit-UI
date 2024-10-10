@@ -19,7 +19,11 @@ struct ContentView: View {
             
             List(jokesViewModel.jokes) { element in
                 
-                Text(element.value)
+                NavigationLink(destination: DetailView(joke: element)) {
+                    Text(element.value)
+                }
+                
+               
             } .navigationTitle("Jokes").toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
@@ -32,17 +36,21 @@ struct ContentView: View {
             }
             
         }.searchable(text: $searchText).onChange(of: searchText) { searchJokes in
-            print(searchJokes)
+            
+            if searchJokes.isEmpty {
+                filteredJokes = jokesViewModel.jokes
+            } else {
+                filteredJokes = jokesViewModel.jokes.filter { $0.value.lowercased().contains(searchJokes.lowercased()) }
+            }
+            //print(searchJokes)
             
         }
     }
 }
 
-            
-            
-            struct ContentView_Previews: PreviewProvider {
-                static var previews: some View {
-                    ContentView()
+struct ContentView_Previews: PreviewProvider {
+static var previews: some View {
+            ContentView()
                 }
             }
         
