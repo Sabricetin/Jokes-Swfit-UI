@@ -12,6 +12,7 @@ Jokes App, kullanıcılara eğlenceli şakalar sunan bir iOS uygulamasıdır. Uy
 - Swift
 - SwiftUI
 - API ile veri çekme
+- Alamofire ile ağ işlemleri
 
 ### Kullanılan Mimari
 Jokes App, MVVM (Model-View-ViewModel) mimari desenini kullanarak geliştirilmiştir. Bu mimari, iş mantığını ve veri yönetimini kullanıcı arayüzünden ayırarak uygulamanın daha modüler, test edilebilir ve sürdürülebilir olmasını sağlar.
