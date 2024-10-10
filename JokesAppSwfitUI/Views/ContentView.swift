@@ -23,34 +23,41 @@ struct ContentView: View {
                     Text(element.value)
                 }
                 
-               
-            } .navigationTitle("Jokes").toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        jokesViewModel.addNewJokes()
+                
+                
+                 } .alert(item: $jokesViewModel.errorMessage) { error in
+                 Alert(title: Text("Hata") , message: Text(error.message), dismissButton: .default(Text("Tamam")))
+                 
+                 }
+                
+                .navigationTitle("Jokes").toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            jokesViewModel.addNewJokes()
+                        }
+                    label: {
+                        Image(systemName: "plus")
                     }
-                label: {
-                    Image(systemName: "plus")
+                    }
                 }
+                
+            }.searchable(text: $searchText).onChange(of: searchText) { searchJokes in
+                
+                if searchJokes.isEmpty {
+                    filteredJokes = jokesViewModel.jokes
+                } else {
+                    filteredJokes = jokesViewModel.jokes.filter { $0.value.lowercased().contains(searchJokes.lowercased()) }
                 }
+                //print(searchJokes)
+                
             }
-            
-        }.searchable(text: $searchText).onChange(of: searchText) { searchJokes in
-            
-            if searchJokes.isEmpty {
-                filteredJokes = jokesViewModel.jokes
-            } else {
-                filteredJokes = jokesViewModel.jokes.filter { $0.value.lowercased().contains(searchJokes.lowercased()) }
-            }
-            //print(searchJokes)
-            
         }
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-static var previews: some View {
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
             ContentView()
-                }
-            }
-        
+        }
+    }
+    
+

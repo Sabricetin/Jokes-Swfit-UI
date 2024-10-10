@@ -1,9 +1,18 @@
 import Foundation
 import Alamofire
 
+
+struct  ErrorMessage: Identifiable {
+    var id = UUID()
+    var message : String
+    
+}
+
+
 class JokesViewModel : ObservableObject {
     
     @Published var jokes = [Jokes]()
+    @Published var errorMessage: ErrorMessage?
     
     init(){
         
@@ -24,7 +33,10 @@ class JokesViewModel : ObservableObject {
                     }
                     
                 case .failure(let error):
-                    print(error)
+                    DispatchQueue.main.async {
+                        self.errorMessage = ErrorMessage(message: "Veri alınamadı: \(error.localizedDescription)")
+
+                    }
                 }
                 
             }
